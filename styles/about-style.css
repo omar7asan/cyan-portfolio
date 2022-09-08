@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --dark-cyan: #2c3e50;
+    --light-cyan: #34495e;
+    --super-light-cyan: #1abc9c;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background: var(--dark-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+nav{
+    height: 8%;
+    border-radius: 8px;
+    margin-top: 15px;
+    width: 490px;
+    background: var(--light-cyan);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    text-align: center;
+    position: relative;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    display: inline-block;
+    line-height: 48px;
+    z-index: 1;
+    position: relative;
+}
+a:nth-child(1){
+    width: 150px;
+}
+a:nth-child(2){
+    width: 150px;
+}
+a:nth-child(3){
+    width: 150px;
+}
+nav .animation{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 0;
+    background: var(--super-light-cyan);
+    border-radius: 8px;
+    transition: all 0.5s ease 0s;
+}
+nav .start-home,
+a:nth-child(1):hover~.animation{
+    width: 170px;
+    left: 10px;
+}
+nav .start-about,
+a:nth-child(2):hover~.animation{
+    width: 190px;
+    left: 150px;
+}
+nav .start-projects,
+a:nth-child(3):hover~.animation{
+    width: 170px;
+    left: 310px;
+}
+
+
+.container{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+.text-container{
+    width: 50%;
+}
+.text-container h4{
+    color: #fff;
+    font-size: 35px;
+    animation: fadeInLeft 1s;
+}
+.text-container p{
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 30px;
+    animation: fadeInLeft 1.5s;
+}
+@keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-40px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+}
+.cyan-txt{
+    color: var(--super-light-cyan);
+}
+.about-photo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.about-photo img{
+    width: 400px;
+    border-radius: 16px;
+    transition: 0.5s;
+    animation: fadeInRight 1.5s;
+}
+.about-photo img:hover{
+    transform: translateY(-10px);
+}
+@keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(40px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+}
